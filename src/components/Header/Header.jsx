@@ -17,14 +17,15 @@ const Header = () => {
           Explore New places
         </Typography>
 
-        
-            <div className={classes.search}>
+       
+        <div className={classes.search}>
                 <div className={classes.searchIcon}>
                     <SearchIcon/>
                 </div>
+
                 <InputBase placeholder= "Search..." classes={{root:classes.inputRoot,input:classes.inputInput}}></InputBase>
             </div>
-       
+      
         </Box>
     </Toolbar>
       </AppBar>

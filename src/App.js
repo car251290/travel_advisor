@@ -25,6 +25,7 @@ const App = () => {
         .then((data) => {
             //consolelog the data 
             //console.log(data);
+            //the set data to the places
             setPlaces(data)
 
         })
@@ -45,6 +46,7 @@ const App = () => {
                 setCoordinates = {setCoordinates}
                 setBounds = {setBounds}
                 coordinates = {coordinates}
+                places={places}
                 />
             </Grid>
             

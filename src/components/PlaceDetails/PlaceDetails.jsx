@@ -35,7 +35,7 @@ const PlaceDetails = ({place}) => {
                    </Box>
                 ))}
 
-                {place?.cuisine.map(({name}) => (
+                {place?.cuisine?.map(({name}) => (
                     <Chip key={name} size = "small" label = {name} className={classes.chip}></Chip>
                 ))}
                 {place.adress && (
