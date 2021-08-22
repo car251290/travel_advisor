@@ -11,6 +11,9 @@ const App = () => {
     const [bounds, setBounds] = useState({});
     //to set and get the place where you are 
     const [places, setPlaces] = useState([]);
+
+    const [childClicked, setChildClicked] = useState(null);
+    const [isLoading,setisLoading] = useState(false);
   
     useEffect (()=> {
         navigator.geolocation.getCurrentPosition(({coords:{latitude,longitude} } ) => {
@@ -20,6 +23,7 @@ const App = () => {
 
     //using the effect to unwrapp the data of the restaurants
     useEffect ( () => {
+        setisLoading(true);
         //console.log(coordinates, bounds)
         getPlacesData(bounds.sw,bounds.ne)
         .then((data) => {
@@ -27,6 +31,7 @@ const App = () => {
             //console.log(data);
             //the set data to the places
             setPlaces(data)
+            setisLoading(false);
 
         })
 
@@ -38,7 +43,9 @@ const App = () => {
         <Header/>
         <Grid container spacing={3} style={{width:'100%'}}>
             <Grid item xs={12} md={4}>
-                <List places = {places}/>
+                <List places = {places}
+                childClicked={childClicked}
+                />
             </Grid>
 
             <Grid item xs={12} md={8}>
@@ -46,6 +53,7 @@ const App = () => {
                 setCoordinates = {setCoordinates}
                 setBounds = {setBounds}
                 coordinates = {coordinates}
+                isLoading={isLoading}
                 places={places}
                 />
             </Grid>
