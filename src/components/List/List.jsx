@@ -26,11 +26,8 @@ import PlaceDetails from '../PlaceDetails/PlaceDetails'
             </div>
         ):(
             <>
-
-       
         <FormControl className = {classes.formControl}>
             <InputLabel>Type</InputLabel>
-           
             <Select value = {type} onChange = {(e) => setType(e.target.value) }>
                 <MenuItem value="restaurant">Restaurant</MenuItem>
                 <MenuItem value="Hotels">Hotels</MenuItem>
