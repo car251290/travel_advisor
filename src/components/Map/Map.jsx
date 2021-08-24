@@ -7,7 +7,7 @@ import Rating from '@material-ui/lab/Rating';
 import useStyles from './styles';
 
 
-const Map = ({setCoordinates,setBounds,coordinates,places,setChildClicked}) => {
+const Map = ({setCoordinates,setBounds,coordinates,places,setChildClicked,weatherData }) => {
     const classes = useStyles();
     const isDesktop = useMediaQuery('(min-width:600px)')
     
@@ -16,22 +16,22 @@ const Map = ({setCoordinates,setBounds,coordinates,places,setChildClicked}) => {
     <div className={classes.mapContainer}>
         <GoogleMapReact 
         
-        bootstrapURLKeys={{key:'AIzaSyBWo2uCoWzZiipNqfx0BoTFO5mLwBBMDOA'}}
+        bootstrapURLKeys={{key:process.env.REACT_APP_GOOGLE_MAPS_API_KEY}}
         defaultCenter={coordinates}
         center = {coordinates}
         defaultZoom={14}
         margin={[50,50,50,50]}
-        options={''}
+        options={{disableDefaultUI: true, zoomControl:true, styles: mapStyles}}
         onChange ={(e)=> {
             //console.log(e);
             setCoordinates ({lat: e.center.lat, lng: e.center.lng});
-            setBounds({ne: e.marginBounds.ne,sw: e.marginBounds.sw});
+            setBounds({ ne: e.marginBounds.ne,sw: e.marginBounds.sw});
             //places({places})
         }}
         onChildClick= {(child)=>setChildClicked(child)} 
         >
         
-            {places?.map((place,i) => {
+            {places.length && places.map((place,i) => {
                 //this is mapping to the latitud and the longitud to get the location of the map restaurant
                 <div className={classes.markerContainer}
                 lat={Number(place.latitude)}
@@ -57,6 +57,12 @@ const Map = ({setCoordinates,setBounds,coordinates,places,setChildClicked}) => {
 
                 </div>
             })}
+
+           { weatherData?.list?.length && weatherData.list.map((data, i) => (
+          <div key={i} lat={data.coord.lat} lng={data.coord.lon}>
+            <img src={`http://openweathermap.org/img/w/${data.weather[0].icon}.png`} height="100px" />
+          </div>
+        ))}  
 
         </GoogleMapReact>
 
