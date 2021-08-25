@@ -9,13 +9,13 @@ const Header = ({onPlaceChanged,onLoad}) => {
 
     return (
     <AppBar position ="static">
-        <Toolbar className={classes.toolBar}>
-        <Typography variant="h5" className={classes.title}>
+        <Toolbar className={classes.toolbar}>
+        <Typography variant= "h5" className={classes.title}>
             Travel Advisor
         </Typography>
         <Box display="flex"> 
         <Typography variant="h6" className={classes.title}>
-          Explore New places
+          Explore great places
         </Typography>
 
        <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged} >
@@ -23,11 +23,11 @@ const Header = ({onPlaceChanged,onLoad}) => {
                 <div className={classes.searchIcon}>
                     <SearchIcon/>
                 </div>
-                <InputBase placeholder= "Search..." classes={{root:classes.inputRoot,input:classes.inputInput}}></InputBase>
-            </div>
+                <InputBase placeholder= "Search..." classes={{root:classes.inputRoot, input:classes.inputInput}}></InputBase>
+        </div>
             </Autocomplete>
         </Box>
-    </Toolbar>
+       </Toolbar>
       </AppBar>
     );
 }
