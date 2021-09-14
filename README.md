@@ -25,7 +25,7 @@ A framework can solve these problems. But such a framework must have the right l
 ## Next.js: The React Framework
 Enter Next.js, the React Framework. Next.js provides a solution to all of the above problems. But more importantly, it puts you and your team in the pit of success when building React applications.
 
-Next.js aims to have best-in-class developer experience and many built-in features, such as:
+# Next.js aims to have best-in-class developer experience and many built-in features, such as:
 
 An intuitive page-based routing system (with support for dynamic routes)
 Pre-rendering, both static generation (SSG) and server-side rendering (SSR) are supported on a per-page basis
