@@ -10,9 +10,9 @@ https://console.cloud.google.com/freetrial/signup/tos?_ga=2.191987363.821486316.
 
 React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.
 
-Create a Next.js App
+## Create a Next.js App
 
-1234
+1,2,3,4
 
 To build a complete web application with React from scratch, there are many important details you need to consider:
 
