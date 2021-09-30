@@ -44,9 +44,7 @@ Fully extendable
 
 # Requirements
 * Visual Studio
-* MongoDb
 * Netlify
-* Heroku (deploy application)
 * Material UI (for the design in mobile device and responsive application)
 
 
