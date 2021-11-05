@@ -39,12 +39,11 @@ Development environment with Fast Refresh support
 API routes to build API endpoints with Serverless Functions
 Fully extendable
 
-# Language 
-## React(JS)
-
 # Requirements
 * Visual Studio
+* React.js
 * Netlify
+* JavaScript
 * Material UI (for the design in mobile device and responsive application)
 
 
