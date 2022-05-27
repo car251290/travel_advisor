@@ -48,5 +48,6 @@ Fully extendable
 * Netlify
 * JavaScript
 * Material UI (for the design in mobile device and responsive application)
+* Hooks
 
 
