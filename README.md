@@ -13,6 +13,8 @@ https://console.cloud.google.com/freetrial/signup/tos?_ga=2.191987363.821486316.
 
 React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.
 
+How does React use JavaScript?
+React utilizes features of modern JavaScript for many of its patterns. Its biggest departure from JavaScript comes with the use of JSX syntax. JSX extends JavaScript's syntax so that HTML-like code can live alongside it. For example:
 ## Create a Next.js App
 To build a complete web application with React from scratch, there are many important details you need to consider:
 
